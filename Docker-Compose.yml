@@ -1,0 +1,17 @@
+services:
+    mssql:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        environment:
+            ACCEPT_EULA: "Y"
+            SA_PASSWORD: "Admin@123"
+        ports:
+            - "1434:1433"
+        volumes:
+            - /var/opt/mssql    
+
+    rabbitmq:
+        image: rabbitmq:3-management-alpine
+        container_name: rabbit-mq
+        ports:
+        - "5672:5672"
+        - "15672:15672"

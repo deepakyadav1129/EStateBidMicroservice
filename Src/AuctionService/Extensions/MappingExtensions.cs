@@ -1,5 +1,6 @@
 ﻿using AuctionService.Dtos;
 using AuctionService.Entities;
+using SharedMicro;
 
 namespace AuctionService.Extensions
 {
@@ -71,31 +72,31 @@ namespace AuctionService.Extensions
             auction.Property.ImageUrl =  dto.ImageUrl??string.Empty; 
             
         }
-        //public static AuctionCreated ToAuctionCreated(this Auction auction)
-        //{
-        //    return new AuctionCreated
-        //    {
-        //        Id = auction.Id,
-        //        ReservePrice = auction.ReservePrice,
-        //        Seller = auction.Seller,
-        //        Winner = auction.Winner,
-        //        SolAmount = auction.SolAmount,
-        //        CurrentHighBid = auction.CurrentHighBid,
-        //        CreatedAt = auction.CreatedAt,
-        //        UpdatedAt = auction.UpdatedAt,
-        //        AuctionEnd = auction.AuctionEnd,
-        //        Status = auction.Status.ToString(),
-        //        Title = auction.Property.Title,
-        //        Description = auction.Property.Description,
-        //        Address = auction.Property.Address,
-        //        City = auction.Property.City,
-        //        State = auction.Property.State,
-        //        Bedrooms = auction.Property.Bedrooms,
-        //        Bathrooms = auction.Property.Bathrooms,
-        //        AreaSqFt = auction.Property.AreaSqFt,
-        //        ImageUrl = auction.Property.ImageUrl
+        public static AuctionCreated ToAuctionCreated(this Auction auction)
+        {
+            return new AuctionCreated
+            {
+                Id = auction.Id,
+                ReservePrice = auction.ReservePrice,
+                Seller = auction.Seller,
+                Winner = auction.Winner,
+                SolAmount = auction.SolAmount,
+                CurrentHighBid = auction.CurrentHighBid,
+                CreatedAt = auction.CreatedAt,
+                UpdatedAt = auction.UpdatedAt,
+                AuctionEnd = auction.AuctionEnd,
+                Status = auction.Status.ToString(),
+                Title = auction.Property.Title,
+                Description = auction.Property.Description,
+                Address = auction.Property.Address,
+                City = auction.Property.City,
+                State = auction.Property.State,
+                Bedrooms = auction.Property.Bedrooms,
+                Bathrooms = auction.Property.Bathrooms,
+                AreaSqFt = auction.Property.AreaSqFt,
+                ImageUrl = auction.Property.ImageUrl
 
-        //    };
-        //}
+            };
+        }
     }
 }

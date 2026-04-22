@@ -24,8 +24,8 @@ namespace AuctionService.Data
                 .HasOne(x => x.Property)
                 .WithOne(x => x.Auction)
                 .HasForeignKey<Property>(x => x.AuctionId);
-            //modelBuilder.AddOutboxMessageEntity();
-            //modelBuilder.AddOutboxStateEntity();
+            modelBuilder.AddOutboxMessageEntity();
+            modelBuilder.AddOutboxStateEntity();
         }
     }
 }

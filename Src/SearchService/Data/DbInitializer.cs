@@ -9,15 +9,16 @@ namespace SearchService.Data
         {
             using var scope =  app.Services.CreateScope();
             var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-            await context.Database.MigrateAsync();
-            if (context.ItemSearches.Any()) return;
-            var httpClient = scope.ServiceProvider.GetRequiredService<AuctionServiceHttpClient>();
-            var auctions =  await httpClient.GetAuctionForSearchDB();
-            if (auctions.Count() > 0)
-            {
-                context.ItemSearches.AddRange(auctions);
-                await context.SaveChangesAsync();
-            }
+            //TODO
+            //await context.Database.MigrateAsync();
+            //if (context.ItemSearches.Any()) return;
+            //var httpClient = scope.ServiceProvider.GetRequiredService<AuctionServiceHttpClient>();
+            //var auctions =  await httpClient.GetAuctionForSearchDB();
+            //if (auctions.Count() > 0)
+            //{
+            //    context.ItemSearches.AddRange(auctions);
+            //    await context.SaveChangesAsync();
+            //}
             
         }
     }
