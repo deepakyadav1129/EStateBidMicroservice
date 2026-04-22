@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchService", "Src\Search
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedMicro", "Src\SharedMicro\SharedMicro.csproj", "{A7C00B9C-A1A7-47AB-86BD-01A915192D9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityService", "Src\IdentityService\IdentityService.csproj", "{55FED2AE-C050-7E14-BBF8-48C7A7F1D5BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{A7C00B9C-A1A7-47AB-86BD-01A915192D9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7C00B9C-A1A7-47AB-86BD-01A915192D9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7C00B9C-A1A7-47AB-86BD-01A915192D9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55FED2AE-C050-7E14-BBF8-48C7A7F1D5BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55FED2AE-C050-7E14-BBF8-48C7A7F1D5BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55FED2AE-C050-7E14-BBF8-48C7A7F1D5BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55FED2AE-C050-7E14-BBF8-48C7A7F1D5BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +43,7 @@ Global
 		{3BC8F0F6-3E9F-402B-AC6E-6C3E0798C27E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{5E84EFCD-1768-4DA7-8592-B556E20D94A9} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{A7C00B9C-A1A7-47AB-86BD-01A915192D9F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{55FED2AE-C050-7E14-BBF8-48C7A7F1D5BC} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7CB9BDDF-A41A-4035-86DF-4D5390447C8C}
