@@ -1,0 +1,86 @@
+{
+  "info": {
+    "_postman_id": "da18b3e1-7d47-4c38-bdf2-05eafc2bbb24",
+    "name": "Microservice",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "28547081"
+  },
+  "item": [
+    {
+      "name": "AuctionService",
+      "item": [
+        {
+          "name": "getAllAuctions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7003/api/auctions",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7003",
+              "path": [
+                "api",
+                "auctions"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "SearchService",
+      "item": [
+        {
+          "name": "SearchAllAuctions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7199/api/search",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7199",
+              "path": [
+                "api",
+                "search"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "SearchAuctionBySeller",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7199/api/search?seller=bob",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7199",
+              "path": [
+                "api",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "seller",
+                  "value": "bob"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
