@@ -2,11 +2,6 @@
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using SharedMicro;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BidingService.Services
 {
@@ -44,7 +39,7 @@ namespace BidingService.Services
                 auction.IsFinished = true;
                 var winingBid = await context.Bids.Where(x => x.AuctionId == auction.Id &&
                 x.BidStatus == Entities.BidStatus.Accepted).OrderByDescending(x=>x.Amount).FirstOrDefaultAsync(stoppingToken);
-                // publish to RabbitM
+                // publish to RabbitMQ
 
                 await publisher.Publish(new AuctionFinished
                 {
