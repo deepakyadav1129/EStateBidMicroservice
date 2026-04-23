@@ -2,6 +2,7 @@
 using AuctionService.Extensions;
 using AuctionService.Repositories;
 using MassTransit;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AuctionService.Controllers
@@ -19,18 +20,21 @@ namespace AuctionService.Controllers
             _publishEndpoint = publishEndpoint; 
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<List<AuctionDto>>> GetAuctions()
         {
             return Ok(await _auctionRepository.GetAllAsync());
         }
 
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<ActionResult<AuctionDto>> GetAuction(Guid id)
         {
             return Ok(await _auctionRepository.GetAuctionByIdAsync(id));
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<AuctionDto>> CreateAuction(CreateAuctionDto dto)
         {
@@ -46,6 +50,7 @@ namespace AuctionService.Controllers
             return CreatedAtAction(nameof(GetAuction), new { id = auction.Id }, auction.ToAuctionDto());
         }
 
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateAuctionAsync(Guid id, UpdateAuctionDto dto)
         {
@@ -57,7 +62,7 @@ namespace AuctionService.Controllers
             return Ok();
         }
 
-
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAuction(Guid id)
         {
